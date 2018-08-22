@@ -1,0 +1,58 @@
+/*home*/
+/*Skill*/
+/*Service*/
+/*Footer*/
+/**************************************
+HOME--navegation @andresshare
+****************************************/
+.logo{
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+
+}
+
+/* footer social icons */
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+
+
+
+.cajaHome {
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  color: white;
+  background-image: url("https://static.pexels.com/photos/265626/pexels-photo-265626.jpeg");
+  background-color: black;
+  height: 550px; }
+
+.tituloCentral {
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  color: white;
+  height: 50px;
+  padding-top: 0.8%;
+  letter-spacing:5px;
+}
+
+.tituloFrase {
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  color: white;
+  height: 30px;
+  margin-top: -3%;
+  padding-top:10px;
+}
+
+.cajaTexto {
+  background: rgba(39, 123, 145, 0.35); }
+
+/*FIN-home*/
