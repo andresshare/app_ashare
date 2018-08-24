@@ -1,362 +1,827 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> | @andresshare | Frontend developer</title>
 
-    <link rel="stylesheet" href="{% static  'css/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Andresshare</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/favicon/apple-icon-57x57.png'%}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/img/favicon/apple-icon-60x60.png'%}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/favicon/apple-icon-72x72.png'%}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/favicon/apple-icon-76x76.png'%}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/favicon/apple-icon-114x114.png'%}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/favicon/apple-icon-120x120.png'%}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'img/favicon/apple-icon-144x144.png'%}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'img/favicon/apple-icon-152x152.png'%}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-icon-180x180.png'%}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'img/favicon/android-icon-192x192.png'%}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon-32x32.png'%}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'img/favicon/favicon-96x96.png'%}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png'%}">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{%static 'css/base.css'%}">
+    <link rel="stylesheet" href="{%static 'css/vendor.css'%}">
+    <link rel="stylesheet" href="{%static 'css/main.css'%}">
+
+    <!-- script
+    ================================================== -->
+    <script src="{%static 'js/modernizr.js'%}"></script>
+    <script src="{%static 'js/pace.min.js'%}"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="{%static 'favicon.ico'%}" type="image/x-icon">
+    <link rel="icon" href="{%static 'favicon.ico'%}" type="image/x-icon">
 
 </head>
-<!-- <div>Iconos diseñados por <a href="https://www.flaticon.es/autores/eleonor-wang" title="Eleonor Wang">Eleonor Wang</a> desde <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.com</a> con licencia <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
-<!-- <div>Iconos diseñados por <a href="http://www.freepik.com" title="Freepik">Freepik</a> desde <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.com</a> con licencia <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
-<!-- <div>Iconos diseñados por <a href="http://www.freepik.com" title="Freepik">Freepik</a> desde <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.com</a> con licencia <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
 
-<body>
+<body id="top">
 
-<!--MENU-navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-company-red mt-5 ">
-        <a class="navbar-brand" href="#"> <div class="social">
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
 
-
-        </div> </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link px-3" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3" href="#">Works</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3" href="#">Skills</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link px-3" href="#">Lab</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3" href="#">Service</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3" href="#">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3" href="#">Contact</a>
-                </li>
-            </ul>
+        <div class="header-logo">
+            <a class="site-logo" href="{%static 'index.html'%}">
+                <img src="{%static 'img/logo.png'%}" alt="Homepage">
+            </a>
         </div>
-    </nav>
-<!--END-MENU-navbar-->
 
-<!--SLIDER-home-->
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12 col-md-6 col-lg-6">
+        <nav class="header-nav">
 
-            <img class=" float-left img-fluid rounded img-thumbnail " src="{%static 'img/andresshare.jpg' %}" alt="andresshare">
-            <div class="text-center center-block">
-                <a href="https://www.instagram.com/andresshare"><i id="social-insta" class="fa fa-instagram fa-3x social p-3"></i></a>
-                <a href="https://twitter.com/andresshare"><i id="social-tw" class="fa fa-twitter-square fa-3x social p-3"></i></a>
-                <a href="https://github.com/andresshare"><i id="social-git" class="fa fa-github-square fa-3x social p-3"></i></a>
-                <a href="youtube.com/andresshare"><i id="social-you" class="fa fa-youtube-square fa-3x social p-3"></i></a>
+            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <div class="header-nav__content">
+                <h3>Navigation</h3>
+
+                <ul class="header-nav__list">
+                    <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
+                    <li><a class="smoothscroll" href="#about" title="about">About</a></li>
+                    <li><a class="smoothscroll" href="#services" title="services">Services</a></li>
+                    <li><a class="smoothscroll" href="#works" title="works">Works</a></li>
+                    <li><a class="smoothscroll" href="#clients" title="clients">Clients</a></li>
+                    <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
+                </ul>
+
+                <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi
+                    veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
+
+                <ul class="header-nav__social">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                    </li>
+                </ul>
+
+            </div> <!-- end header-nav__content -->
+
+        </nav> <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{%static 'img/hero-bg.jpg'%}" data-natural-width=3000
+        data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>Welcome to Glint</h3>
+
+                <h1>
+                    We are a creative group <br> of people who design <br> influential brands and <br> digital experiences.
+                </h1>
+
+                <div class="home-content__buttons">
+                    <a href="#contact" class="smoothscroll btn btn--stroke">
+                        Start a Project
+                    </a>
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        More About Us
+                    </a>
+                </div>
+
             </div>
-        </div>
-         <div class="col-12 col-md-6 col-lg-6">
-            <p id="hey">Hey!</p>
-            <p id="linea2">I'm Andres Bernal</p>
-            <p id="linea3">FullStackDeveloper</p>
-            <p id="linea4">python/javascript/postgress</p>
 
-            <a class="btn btn-1 ">Contact me</a>
-
-         </div>
-
-<!--END-SLIDER-home-->
-
-<!-- section-works-->
-
-
-
-<section class="container">
-    <div class="row">
-        <div class="col-12 col-md-12 col-lg-12">
-        <p class="text-center" id="textoWork">|</p>
-        <p class="text-center" id="textoWork">WOrK! in action</p>
-        </div>
-</section>
-
-
-<section class="container-fluid mt-4 pt-4">
-    <div class="row">
-        <div class="col">
-            <div class="card-deck">
-                <div class="card" data-aos="flip-up">
-                    <img class="card-img-top .img-fluid" src="https://images.template.net/wp-content/uploads/2015/08/Gallery-Integrated-Business-Website-Template-788x553.jpg"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h4 class="card-title text-center">Sites</h4>
-                    </div>
-                </div>
-                <div class="card " data-aos="flip-down">
-                    <img class="card-img-top .img-fluid" style="height:290px;" src="https://w3layouts.com/wp-content/uploads/2016/01/novus_admin_panel.jpg"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h4 class="card-title text-center">Mobile</h4>
-                    </div>
-                </div>
-                <div class="card" data-aos="flip-up">
-                    <img class="card-img-top .img-fluid" style="height:290px;" src="https://static.pexels.com/photos/265626/pexels-photo-265626.jpeg"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h4 class="card-title text-center">Demo-Lab</h4>
-                    </div>
-                </div>
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Scroll Down</span>
+                </a>
             </div>
-        </div>
 
-<!--End -Section-works-->
+            <div class="home-content__line"></div>
 
-<!--section - Skills-->
-<section class="container-fluid" id="skills">
-    <div class="row cajaWork justify-content-start">
-        <div class="col caja">
-            <p class="text-center" id="textoWork">|</p>
-            <p class="text-center" id="textoWork">SkilLs & LaB! ka-POW!</p>
-        </div>
-    </div>
-</section>
+        </div> <!-- end home-content -->
 
 
-<!-- skill & lab -->
-<section class="row mt-5 ">
-    <div class="col-sm-6 ">
-        <div class="card color " data-aos="zoom-out-left">
-            <div class="card-body">
-                <h4 class="card-title"> | SkillSet</h4>
-                <p class="card-text">
-                    <ul>
-                        <li> - Javascript | ts </li>
-                        <li> - React</li>
-                        <li> - Reac native</li>
-                        <li> - Express</li>
-                        <li> - NodeJs</li>
-                        <li> - Mongo</li>
-                    </ul>
+        <ul class="home-social">
+            <li>
+                <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-behance" aria-hidden="true"></i><span>Behance</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a>
+            </li>
+        </ul>
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id='about' class="s-about">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead subhead--dark">Hello There</h3>
+                <h1 class="display-1 display-1--light">We Are Glint</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row about-desc" data-aos="fade-up">
+            <div class="col-full">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
                 </p>
             </div>
-        </div>
-    </div>
-    <div class="col-sm-6">
-        <div class="card" data-aos="zoom-out-left ">
-            <div class="card-body">
-                <h4 class="card-title"> | Project Managing Skills</h4>
-                <p class="card-text">
-                    <ul>
-                        <li class="fa fa-bar-chart"> - Scrum</li></br>
-                        <li class="fa fa-gitlab"> - Gitlab</li> </br>
-                        <li class="fa fa-bitbucket"> - BitBucket</li></br>
-                        <li class="fa fa-trello"> - Trello <i> </li></br>
-                        <li class="fa fa-trello"> - Kanban <i> </li></br>
-                        <li class="fa fa-github"> - Github.<a href="#"><b>+ Click me</b></i></a></li>
-                    </ul>
-                </p>
+        </div> <!-- end about-desc -->
+
+        <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+
+            <div class="col-block stats__col ">
+                <div class="stats__count">127</div>
+                <h5>Awards Received</h5>
             </div>
-        </div>
-    </div>
-    </div>
-</section>
-<!--service-->
-<section>
-    <div class="container-fluid" id="service">
-        <div class="row cajaWork justify-content-start" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-            <div class="col caja">
-                <p class="text-center" id="textoWork">|</p>
-                <p class="text-center" id="textoWork">Service!.....¡Psst!!</p>
+            <div class="col-block stats__col">
+                <div class="stats__count">1505</div>
+                <h5>Cups of Coffee</h5>
             </div>
-        </div>
-    </div>
-</section>
+            <div class="col-block stats__col">
+                <div class="stats__count">109</div>
+                <h5>Projects Completed</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">102</div>
+                <h5>Happy Clients</h5>
+            </div>
+
+        </div> <!-- end about-stats -->
+
+        <div class="about__line"></div>
+
+    </section> <!-- end s-about -->
 
 
-<section class="container">
-    <div class="row align-items-center" id="espaciado">
-        <div class="col">
-            <div class="card bg-light mb-3" data-aos="fade-down" style="max-width: 20rem;">
-                <div class="card-header text-center" colorservice> <img src="{% static 'img/sitioweb.png' %}" style="width:30px; height:30px;"
-                        alt="developmentweb @andresshare"> <b>| DevWEB</b></div>
-                <div class="card-body">
-                    <p class="card-text ">Each experience should be unique. Find out how to make your complex problems simple,
-                        It’s easy. <i class="colorfuente">Just fill out the form and we’ll give you a call</i>
+    <!-- services
+    ================================================== -->
+    <section id='services' class="s-services">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">What We Do</h3>
+                <h1 class="display-2">We’ve got everything you need to launch and grow your business</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row services-list block-1-2 block-tab-full">
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-paint-brush"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Brand Identity</h3>
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus
+                        est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas
+                        ipsa in tempora esse soluta sint.
                     </p>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="card bg-light mb-3" data-aos="fade-down" style="max-width: 20rem;">
-                <div class="card-header text-center"><img src="{% static 'img/app.png' %}" style="width:30px; height:30px;" alt="app @andresshare">                    <b>|
-                        App Mobile</b> </div>
-                <div class="card-body">
-                    <p class="card-text">Develop powerful, highly usable Android apps that solve business problems, attract
-                        users, and reinforce your brand.<i class="colorfuente">Just fill out the form and we’ll give you
-                            a call</i> </p>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-group"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Illustration</h3>
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus
+                        est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas
+                        ipsa in tempora esse soluta sint.
+                    </p>
                 </div>
             </div>
-        </div>
-        <div class="col mt-4">
-            <div class="card bg-light mb-3" data-aos="fade-down" style="max-width: 20rem;">
-                <div class="card-header text-center"><img src="{% static 'img/app2.png'%}" style="width:30px; height:30px;" alt="app @andresshare"><b>|
-                        Custom Software Development</b></div>
-                <div class="card-body">
-                    <p class="card-text">I use a mixture of the traditional waterfall or agile development methods depending
-                        on the needs of the client, size of the project and project delivery date.
-                        <i class="colorfuente">Just fill out the form and we’ll give you a call</i></p>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-megaphone"></i>
                 </div>
+                <div class="service-text">
+                    <h3 class="h2">Marketing</h3>
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus
+                        est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas
+                        ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-earth"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Web Design</h3>
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus
+                        est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas
+                        ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-cube"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Packaging Design</h3>
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus
+                        est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas
+                        ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon"><i class="icon-lego-block"></i></div>
+                <div class="service-text">
+                    <h3 class="h2">Web Development</h3>
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus
+                        est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas
+                        ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+        </div> <!-- end services-list -->
+
+    </section> <!-- end s-services -->
+
+
+    <!-- works
+    ================================================== -->
+    <section id='works' class="s-works">
+
+        <div class="intro-wrap">
+
+            <div class="row section-header has-bottom-sep light-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead">Recent Works</h3>
+                    <h1 class="display-2 display-2--light">We love what we do, check out some of our latest works</h1>
+                </div>
+            </div> <!-- end section-header -->
+
+        </div> <!-- end intro-wrap -->
+
+        <div class="row works-content">
+            <div class="col-full masonry-wrap">
+                <div class="masonry">
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                <a href="{% static 'img/portfolio/gallery/g-shutterbug.jpg' %}" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                     <img src="{% static 'img/portfolio/lady-shutterbug.jpg' %}" srcset="{%static 'img/portfolio/lady-shutterbug.jpg 1x, img/portfolio/lady-shutterbug@2x.jpg 2x'%}" alt="">
+                                </a>
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Shutterbug
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Branding
+                                </p>
+                            </div>
+
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+
+                            <div class="item-folio__caption">
+                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
+                                    dolorem corrupti neque nisi.</p>
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                <a href="{%static 'img/portfolio/gallery/g-woodcraft.jpg'%}" class="thumb-link" title="Woodcraft" data-size="1050x700">
+                                    {% comment %} <img src="{%static 'img/portfolio/woodcraft.jpg'%}" srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x"
+                                        alt=""> {% endcomment %}
+                                </a>
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Woodcraft
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Web Design
+                                </p>
+                            </div>
+
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+
+                            <div class="item-folio__caption">
+                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
+                                    dolorem corrupti neque nisi.</p>
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                <a href="{%static 'img/portfolio/gallery/g-beetle.jpg'%}" class="thumb-link" title="The Beetle Car" data-size="1050x700">
+                                    {% comment %} <img src="{%static 'img/portfolio/the-beetle.jpg'%}" srcset="images/portfolio/the-beetle.jpg 1x, images/portfolio/the-beetle@2x.jpg 2x"
+                                        alt=""> {% endcomment %}
+                                </a>
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    The Beetle
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Web Development
+                                </p>
+                            </div>
+
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+
+                            <div class="item-folio__caption">
+                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
+                                    dolorem corrupti neque nisi.</p>
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                <a href=" {%static 'img/portfolio/gallery/g-grow-green.jpg'%}" class="thumb-link" title="Grow Green" data-size="1050x700">
+                                    {% comment %} <img src="{%static 'img/portfolio/grow-green.jpg'%}" srcset="images/portfolio/grow-green.jpg 1x, images/portfolio/grow-green@2x.jpg 2x"
+                                        alt=""> {% endcomment %}
+                                </a>
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Grow Green
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Branding
+                                </p>
+                            </div>
+
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+
+                            <div class="item-folio__caption">
+                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
+                                    dolorem corrupti neque nisi.</p>
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                <a href="{%static 'img/portfolio/gallery/g-guitarist.jpg'%}" class="thumb-link" title="Guitarist" data-size="1050x700">
+                                    {% comment %} <img src="{%static 'img/portfolio/guitarist.jpg' %}" srcset="images/portfolio/guitarist.jpg 1x, images/portfolio/guitarist@2x.jpg 2x"
+                                        alt=""> {% endcomment %}
+                                </a>
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Guitarist
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Web Design
+                                </p>
+                            </div>
+
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+
+                            <div class="item-folio__caption">
+                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
+                                    dolorem corrupti neque nisi.</p>
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                {% comment %} <a href="{% static 'img/portfolio/gallery/g-palmeira.jpg'%}" class="thumb-link" title="Palmeira" data-size="1050x700">
+                                    <img src="{% static 'img/portfolio/palmeira.jpg'%}" srcset="images/portfolio/palmeira.jpg 1x, images/portfolio/palmeira@2x.jpg 2x" alt="">
+                                </a> {% endcomment %}
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Palmeira
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Web Design
+                                </p>
+                            </div>
+
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+
+                            <div class="item-folio__caption">
+                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
+                                    dolorem corrupti neque nisi.</p>
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                </div> <!-- end masonry -->
+            </div> <!-- end col-full -->
+        </div> <!-- end works-content -->
+
+    </section> <!-- end s-works -->
+
+
+    <!-- clients
+    ================================================== -->
+    <section id="clients" class="s-clients">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Our Clients</h3>
+                <h1 class="display-2">Glint has been honored to partner up with these clients</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row clients-outer" data-aos="fade-up">
+            <div class="col-full">
+                <div class="clients">
+
+                    <a href="#0" title="" class="clients__slide"><img src="{%static 'img/clients/apple.png'%}" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="{%static 'img/clients/atom.png'%}" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="{%static 'img/clients/blackberry.png'%}" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="{%static 'img/clients/dropbox.png'%}" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="{%static 'img/clients/envato.png'%}" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="{%static 'img/clients/firefox.png'%}" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="{%static 'img/clients/joomla.png'%}" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="{%static 'img/clients/magento.png'%}" /></a>
+
+                </div> <!-- end clients -->
+            </div> <!-- end col-full -->
+        </div> <!-- end clients-outer -->
+
+        <div class="row clients-testimonials" data-aos="fade-up">
+            <div class="col-full">
+                <div class="testimonials">
+
+                    <div class="testimonials__slide">
+
+                        <p>Qui ipsam temporibus quisquam vel. Maiores eos cumque distinctio nam accusantium ipsum. Laudantium
+                            quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium quos qui praesentium
+                            corpori. Excepturi nam cupiditate culpa doloremque deleniti repellat.</p>
+
+                        <img src="{%static 'img/avatars/user-01.jpg'%}" alt="Author image" class="testimonials__avatar">
+                        <div class="testimonials__info">
+                            <span class="testimonials__name">Tim Cook</span>
+                            <span class="testimonials__pos">CEO, Apple</span>
+                        </div>
+
+                    </div>
+
+                    <div class="testimonials__slide">
+
+                        <p>Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi
+                            adipisci. Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam
+                            temporibus quisquam vel.</p>
+
+                        <img src="{%static 'img/avatars/user-05.jpg' %}" alt="Author image" class="testimonials__avatar">
+                        <div class="testimonials__info">
+                            <span class="testimonials__name">Sundar Pichai</span>
+                            <span class="testimonials__pos">CEO, Google</span>
+                        </div>
+
+                    </div>
+
+                    <div class="testimonials__slide">
+
+                        <p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt.
+                            Ducimus aut sed ipsam. Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi
+                            voluptas eius distinctio.</p>
+
+                        <img src="{%static 'img/avatars/user-02.jpg'%}" alt="Author image" class="testimonials__avatar">
+                        <div class="testimonials__info">
+                            <span class="testimonials__name">Satya Nadella</span>
+                            <span class="testimonials__pos">CEO, Microsoft</span>
+                        </div>
+
+                    </div>
+
+                </div><!-- end testimonials -->
+
+            </div> <!-- end col-full -->
+        </div> <!-- end client-testimonials -->
+
+    </section> <!-- end s-clients -->
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact">
+
+        <div class="overlay"></div>
+        <div class="contact__line"></div>
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Contact Us</h3>
+                <h1 class="display-2 display-2--light">Reach out for a new project or just say hello</h1>
+            </div>
+        </div>
+
+        <div class="row contact-content" data-aos="fade-up">
+
+            <div class="contact-primary">
+
+                <h3 class="h6">Send Us A Message</h3>
+
+                <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
+                    <fieldset>
+
+                        <div class="form-field">
+                            <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required="" aria-required="true"
+                                class="full-width">
+                        </div>
+                        <div class="form-field">
+                            <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value="" required="" aria-required="true"
+                                class="full-width">
+                        </div>
+                        <div class="form-field">
+                            <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
+                        </div>
+                        <div class="form-field">
+                            <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required="" aria-required="true"
+                                class="full-width"></textarea>
+                        </div>
+                        <div class="form-field">
+                            <button class="full-width btn--primary">Submit</button>
+                            <div class="submit-loader">
+                                <div class="text-loader">Sending...</div>
+                                <div class="s-loader">
+                                    <div class="bounce1"></div>
+                                    <div class="bounce2"></div>
+                                    <div class="bounce3"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+
+                <!-- contact-warning -->
+                <div class="message-warning">
+                    Something went wrong. Please try again.
+                </div>
+
+                <!-- contact-success -->
+                <div class="message-success">
+                    Your message was sent, thank you!<br>
+                </div>
+
+            </div> <!-- end contact-primary -->
+
+            <div class="contact-secondary">
+                <div class="contact-info">
+
+                    <h3 class="h6 hide-on-fullwidth">Contact Info</h3>
+
+                    <div class="cinfo">
+                        <h5>Where to Find Us</h5>
+                        <p>
+                            1600 Amphitheatre Parkway<br> Mountain View, CA<br> 94043 US
+                        </p>
+                    </div>
+
+                    <div class="cinfo">
+                        <h5>Email Us At</h5>
+                        <p>
+                            contact@glintsite.com<br> info@glintsite.com
+                        </p>
+                    </div>
+
+                    <div class="cinfo">
+                        <h5>Call Us At</h5>
+                        <p>
+                            Phone: (+63) 555 1212<br> Mobile: (+63) 555 0100<br> Fax: (+63) 555 0101
+                        </p>
+                    </div>
+
+                    <ul class="contact-social">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                        </li>
+                    </ul> <!-- end contact-social -->
+
+                </div> <!-- end contact-info -->
+            </div> <!-- end contact-secondary -->
+
+        </div> <!-- end contact-content -->
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+
+        <div class="row footer-main">
+
+            <div class="col-six tab-full left footer-desc">
+
+                <div class="footer-logo"></div>
+                Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a
+                pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor
+                accumsan tincidunt. Nulla porttitor accumsan tincidunt. Quaerat voluptas autem necessitatibus vitae aut.
+
+            </div>
+
+            <div class="col-six tab-full right footer-subscribe">
+
+                <h4>Get Notified</h4>
+                <p>Quia quo qui sed odit. Quaerat voluptas autem necessitatibus vitae aut non alias sed quia. Ut itaque enim
+                    optio ut excepturi deserunt iusto porro.</p>
+
+                <div class="subscribe-form">
+                    <form id="mc-form" class="group" novalidate="true">
+                        <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
+                        <input type="submit" name="subscribe" value="Subscribe">
+                        <label for="mc-email" class="subscribe-message"></label>
+                    </form>
+                </div>
+
+            </div>
+
+        </div> <!-- end footer-main -->
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright Glint 2017</span>
+                    <span>Site Template by <a href="https://www.colorlib.com/">Colorlib</a></span>
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs"
+                        title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button
+                    class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
     </div>
-</section>
 
+    <!-- Java Script
+    ================================================== -->
+    <script src="{%static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{%static 'js/plugins.js' %}"></script>
+    <script src="{%static 'js/main.js' %}"></script>
 
-
-
-<!--endservice-->
-
-
-<section class="container-fluid" id="contact">
-    <div class="row cajaWork justify-content-start" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-        <div class="col caja">
-            <p class="text-center" id="textoWork">|</p>
-            <p class="text-center" id="textoWork">Contact!.....¡Wooow!!</p>
-        </div>
-    </div>
-</section>
-
-<!--formulario-->
-
-<!-- Contact -->
-
-<section class="container">
-    <form id="contactForm" method="POST" action="https://formspree.io/andresshare@gmail.com">
-
-        <div class="form-group">
-            <label for="Name" class="col-sm-2 control-label">Name</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                    <input type="text" id="name" name="name" class="form-control" placeholder="* Enter Name">
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="Email" class="col-sm-2 control-label">Email</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="* Enter Email">
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="Phone" class="col-sm-2 control-label">Phone</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
-                    <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter Phone Number">
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="Message" class="col-sm-2 control-label">Message</label>
-            <div class="col-sm-10">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-comment fa-fw"></i></span>
-                    <textarea id="message" name="message" class="form-control" rows="5"></textarea>
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-10" align="center">
-                <div class="g-recaptcha" data-sitekey="6LcjegkTAAAAADwX9hGs2hfyPPcXTWrgcY30_4Dl"></div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-10" align="center">
-                <button type="submit" id="enviar">Send</button>
-            </div>
-        </div>
-    </form>
-    <div class="text-center" id="status"></div>
-
-
-
-    </form>
-</section>
-<hr>
-
-</div>
-<div>
-    <section class="">
-
-
-<!-- end & lab -->
-
-
-
-
-
-
-
-
-
-
-
-                <!--ZonadescriptJS-->
-
-                <script src=" {% static 'js/jquery.js' %}"></script>
-                <script src="{% static 'js/bootstrap.js' %}"></script>
-                <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css" rel="stylesheet">
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
-                <script src="https://use.fontawesome.com/494af2b3ee.js"></script>
-                <script src="{% static 'js/app.js' %}"></script>
-
-                <!--FIN-zonadescriptJS-->
-                <!--zonaWebP-->
-
-                <!--FIN-zonaWebP-->
 </body>
 
 </html>
