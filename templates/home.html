@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
@@ -11,7 +12,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Andresshare</title>
+    <title>Glint</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -21,19 +22,19 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="{%static 'css/base.css'%}">
-    <link rel="stylesheet" href="{%static 'css/vendor.css'%}">
-    <link rel="stylesheet" href="{%static 'css/main.css'%}">
+    <link rel="stylesheet" href="{% static 'css/base.css'%}">
+    <link rel="stylesheet" href="{% static 'css/vendor.css'%}">
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
 
     <!-- script
     ================================================== -->
-    <script src="{%static 'js/modernizr.js'%}"></script>
-    <script src="{%static 'js/pace.min.js'%}"></script>
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/pace.min.js' %}"></script>
 
     <!-- favicons
     ================================================== -->
-    <link rel="shortcut icon" href="{%static 'favicon.ico'%}" type="image/x-icon">
-    <link rel="icon" href="{%static 'favicon.ico'%}" type="image/x-icon">
+    <link rel="shortcut icon" href="{%static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{%static 'favicon.ico' %}" type="image/x-icon">
 
 </head>
 
@@ -44,8 +45,8 @@
     <header class="s-header">
 
         <div class="header-logo">
-            <a class="site-logo" href="{%static 'index.html'%}">
-                <img src="{%static 'img/logo.png'%}" alt="Homepage">
+            <a class="site-logo" href="{% static 'index.html' %}">
+                <img src="{% static 'images/logo.png' %}" alt="Homepage">
             </a>
         </div>
 
@@ -100,7 +101,7 @@
 
     <!-- home
     ================================================== -->
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{%static 'img/hero-bg.jpg'%}" data-natural-width=3000
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{%static 'images/hero-bg.jpg'%}" data-natural-width=3000
         data-natural-height=2000 data-position-y=center>
 
         <div class="overlay"></div>
@@ -325,8 +326,9 @@
                         <div class="item-folio">
 
                             <div class="item-folio__thumb">
-                                <a href="{% static 'img/portfolio/gallery/g-shutterbug.jpg' %}" class="thumb-link" title="Shutterbug" data-size="1050x700">
-                                     <img src="{% static 'img/portfolio/lady-shutterbug.jpg' %}" srcset="{%static 'img/portfolio/lady-shutterbug.jpg 1x, img/portfolio/lady-shutterbug@2x.jpg 2x'%}" alt="">
+                                <a href="{% static 'images/portfolio/gallery/g-shutterbug.jpg'%}" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                    <img src="{% static 'images/portfolio/lady-shutterbug.jpg'%}" srcset="{%static 'images/portfolio/lady-shutterbug.jpg'%} 1x, {% static 'images/portfolio/lady-shutterbug@2x.jpg'%} 2x "
+                                        alt="">
                                 </a>
                             </div>
 
@@ -355,9 +357,9 @@
                         <div class="item-folio">
 
                             <div class="item-folio__thumb">
-                                <a href="{%static 'img/portfolio/gallery/g-woodcraft.jpg'%}" class="thumb-link" title="Woodcraft" data-size="1050x700">
-                                    {% comment %} <img src="{%static 'img/portfolio/woodcraft.jpg'%}" srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x"
-                                        alt=""> {% endcomment %}
+                                <a href="{% static 'images/portfolio/gallery/g-woodcraft.jpg' %}" class="thumb-link" title="Woodcraft" data-size="1050x700">
+                                    <img src="{% static 'images/portfolio/woodcraft.jpg'%}" srcset="{% static 'images/portfolio/woodcraft.jpg'%} 1x, {%static 'images/portfolio/woodcraft@2x.jpg'%} 2x"
+                                        alt="">
                                 </a>
                             </div>
 
@@ -386,9 +388,9 @@
                         <div class="item-folio">
 
                             <div class="item-folio__thumb">
-                                <a href="{%static 'img/portfolio/gallery/g-beetle.jpg'%}" class="thumb-link" title="The Beetle Car" data-size="1050x700">
-                                    {% comment %} <img src="{%static 'img/portfolio/the-beetle.jpg'%}" srcset="images/portfolio/the-beetle.jpg 1x, images/portfolio/the-beetle@2x.jpg 2x"
-                                        alt=""> {% endcomment %}
+                                <a href="{% static 'images/portfolio/gallery/g-beetle.jpg'%}" class="thumb-link" title="The Beetle Car" data-size="1050x700">
+                                    <img src=" {%static 'images/portfolio/the-beetle.jpg'%}" srcset="{% static 'images/portfolio/the-beetle.jpg'%} 1x,{%static 'images/portfolio/the-beetle@2x.jpg' %} 2x"
+                                        alt="">
                                 </a>
                             </div>
 
@@ -417,9 +419,9 @@
                         <div class="item-folio">
 
                             <div class="item-folio__thumb">
-                                <a href=" {%static 'img/portfolio/gallery/g-grow-green.jpg'%}" class="thumb-link" title="Grow Green" data-size="1050x700">
-                                    {% comment %} <img src="{%static 'img/portfolio/grow-green.jpg'%}" srcset="images/portfolio/grow-green.jpg 1x, images/portfolio/grow-green@2x.jpg 2x"
-                                        alt=""> {% endcomment %}
+                                <a href="{% static 'images/portfolio/gallery/g-grow-green.jpg'%}" class="thumb-link" title="Grow Green" data-size="1050x700">
+                                    <img src="{%static 'images/portfolio/grow-green.jpg'%}" srcset="{%static 'images/portfolio/grow-green.jpg'%} 1x, {% static 'images/portfolio/grow-green@2x.jpg' %} 2x"
+                                        alt="">
                                 </a>
                             </div>
 
@@ -448,9 +450,9 @@
                         <div class="item-folio">
 
                             <div class="item-folio__thumb">
-                                <a href="{%static 'img/portfolio/gallery/g-guitarist.jpg'%}" class="thumb-link" title="Guitarist" data-size="1050x700">
-                                    {% comment %} <img src="{%static 'img/portfolio/guitarist.jpg' %}" srcset="images/portfolio/guitarist.jpg 1x, images/portfolio/guitarist@2x.jpg 2x"
-                                        alt=""> {% endcomment %}
+                                <a href="{% static 'images/portfolio/gallery/g-guitarist.jpg'%}" class="thumb-link" title="Guitarist" data-size="1050x700">
+                                    <img src="{% static 'images/portfolio/guitarist.jpg'%}" srcset="{% static 'images/portfolio/guitarist.jpg'%} 1x, {%static 'images/portfolio/guitarist@2x.jpg 2x'%}"
+                                        alt="">
                                 </a>
                             </div>
 
@@ -479,9 +481,9 @@
                         <div class="item-folio">
 
                             <div class="item-folio__thumb">
-                                {% comment %} <a href="{% static 'img/portfolio/gallery/g-palmeira.jpg'%}" class="thumb-link" title="Palmeira" data-size="1050x700">
-                                    <img src="{% static 'img/portfolio/palmeira.jpg'%}" srcset="images/portfolio/palmeira.jpg 1x, images/portfolio/palmeira@2x.jpg 2x" alt="">
-                                </a> {% endcomment %}
+                                <a href="{%static 'images/portfolio/gallery/g-palmeira.jpg'%}" class="thumb-link" title="Palmeira" data-size="1050x700">
+                                    <img src="{% static 'images/portfolio/palmeira.jpg'%}" srcset="{% static 'images/portfolio/palmeira.jpg'%} 1x, {%static 'images/portfolio/palmeira@2x.jpg'%} 2x" alt="">
+                                </a>
                             </div>
 
                             <div class="item-folio__text">
@@ -527,14 +529,14 @@
             <div class="col-full">
                 <div class="clients">
 
-                    <a href="#0" title="" class="clients__slide"><img src="{%static 'img/clients/apple.png'%}" /></a>
-                    <a href="#0" title="" class="clients__slide"><img src="{%static 'img/clients/atom.png'%}" /></a>
-                    <a href="#0" title="" class="clients__slide"><img src="{%static 'img/clients/blackberry.png'%}" /></a>
-                    <a href="#0" title="" class="clients__slide"><img src="{%static 'img/clients/dropbox.png'%}" /></a>
-                    <a href="#0" title="" class="clients__slide"><img src="{%static 'img/clients/envato.png'%}" /></a>
-                    <a href="#0" title="" class="clients__slide"><img src="{%static 'img/clients/firefox.png'%}" /></a>
-                    <a href="#0" title="" class="clients__slide"><img src="{%static 'img/clients/joomla.png'%}" /></a>
-                    <a href="#0" title="" class="clients__slide"><img src="{%static 'img/clients/magento.png'%}" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="{% static 'images/clients/apple.png'%}" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="{% static 'images/clients/atom.png'%}" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="{% static 'images/clients/blackberry.png'%}" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="{% static 'images/clients/dropbox.png'%}" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="{% static 'images/clients/envato.png'%}" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="{% static 'images/clients/firefox.png'%}" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="{% static 'images/clients/joomla.png' %}"/></a>
+                    <a href="#0" title="" class="clients__slide"><img src="{% static 'images/clients/magento.png'%}" /></a>
 
                 </div> <!-- end clients -->
             </div> <!-- end col-full -->
@@ -550,7 +552,7 @@
                             quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium quos qui praesentium
                             corpori. Excepturi nam cupiditate culpa doloremque deleniti repellat.</p>
 
-                        <img src="{%static 'img/avatars/user-01.jpg'%}" alt="Author image" class="testimonials__avatar">
+                        <img src="{%static 'images/avatars/user-01.jpg'%}" alt="Author image" class="testimonials__avatar">
                         <div class="testimonials__info">
                             <span class="testimonials__name">Tim Cook</span>
                             <span class="testimonials__pos">CEO, Apple</span>
@@ -564,7 +566,7 @@
                             adipisci. Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam
                             temporibus quisquam vel.</p>
 
-                        <img src="{%static 'img/avatars/user-05.jpg' %}" alt="Author image" class="testimonials__avatar">
+                        <img src="{%static 'images/avatars/user-05.jpg' %}" alt="Author image" class="testimonials__avatar">
                         <div class="testimonials__info">
                             <span class="testimonials__name">Sundar Pichai</span>
                             <span class="testimonials__pos">CEO, Google</span>
@@ -578,7 +580,7 @@
                             Ducimus aut sed ipsam. Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi
                             voluptas eius distinctio.</p>
 
-                        <img src="{%static 'img/avatars/user-02.jpg'%}" alt="Author image" class="testimonials__avatar">
+                        <img src="{%static 'images/avatars/user-02.jpg'%}" alt="Author image" class="testimonials__avatar">
                         <div class="testimonials__info">
                             <span class="testimonials__name">Satya Nadella</span>
                             <span class="testimonials__pos">CEO, Microsoft</span>
@@ -816,11 +818,12 @@
         </div>
     </div>
 
+
     <!-- Java Script
     ================================================== -->
-    <script src="{%static 'js/jquery-3.2.1.min.js' %}"></script>
-    <script src="{%static 'js/plugins.js' %}"></script>
-    <script src="{%static 'js/main.js' %}"></script>
+    <script src="{%static 'js/jquery-3.2.1.min.js'%}"></script>
+    <script src="{% static 'js/plugins.js'%}"></script>
+    <script src="{% static 'js/main.js'%}"></script>
 
 </body>
 
